@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+:root {
+    --clr-primary-5: hsl(205, 78%, 60%);
+    --clr-grey-1: hsl(209, 61%, 16%);
+    --clr-grey-10: hsl(210, 36%, 96%);
+    --ff-primary: "Roboto", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --clr-primary-6: hsl(205, 89%, 70%);
+    --clr-primary-7: hsl(205, 90%, 76%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-9: hsl(205, 90%, 88%);
+    --clr-primary-10: hsl(205, 100%, 96%);
+}
+.nav-center {
+    background: white;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-header {
+    background: white;
+    padding-left: 0.25rem;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100vw;
+    justify-content: space-between;
+}
+.logo {
+    max-height: 2cm;
+}
+body {
+    background: var(--clr-grey-10);
+    color:var(--clr-grey-1);
+    font-family: var(--ff-secondary) ;
+    margin: auto;
+    box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
+}
+.fas {
+    color: var(--clr-primary-5) ;
+}
+.nav-toggle {
+    border-color: transparent;
+    background: white;
+    font-size: 30px;  
+    
+      
+}
+.links {
+    list-style-type: none;
+    display: grid;
+    padding-bottom: 0.5rem;
+    padding-top: 0;
+    padding: 0;
+    overflow: hidden;
+    /*hide*/
+    height:0;
+    overflow: hidden;
+    transition: var(--transition) ;
+}
+.show-links {
+    height: 10rem;
+}
+a {
+    text-decoration: none;
+    font-family: var(--ff-secondary);
+    text-transform: capitalize;
+    color: var(--clr-grey-1);
+    letter-spacing: 2px;
+    display: block;
+}
+li {
+    padding-bottom: 0.5rem;
+    padding: 0.25rem;
+    margin-left: 0.5rem;
+}
+/* .links a {
+    color: var(--clr-grey-3);
+    font-size: 1rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+  } */
+.links a:hover {
+    background: var(--clr-primary-9);
+    color: var(--clr-primary-5);
+    padding-left: 1rem;
+}
