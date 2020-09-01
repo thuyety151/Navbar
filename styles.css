@@ -17,7 +17,8 @@
     background: white;
     justify-content: space-between;
     align-items: center;
-    justify-content: space-between;
+    display: flex;
+    
 }
 .nav-header {
     background: white;
@@ -38,55 +39,72 @@ body {
     margin: auto;
     box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
 }
+.links {
+    display: flex;
+    margin-right: 1.5rem;
+    transition: var(--transition) ;
+
+}
+
 .fas {
     color: var(--clr-primary-5) ;
+}
+ul {
+    list-style-type: none;
+    padding:0;
 }
 .nav-toggle {
     border-color: transparent;
     background: white;
-    font-size: 30px;  
-    
-      
-}
-.links {
-    list-style-type: none;
-    display: grid;
-    padding-bottom: 0.5rem;
-    padding-top: 0;
-    padding: 0;
+    font-size: 30px; 
+    width:100px; 
+    /*height*/      
     overflow: hidden;
-    /*hide*/
-    height:0;
-    overflow: hidden;
-    transition: var(--transition) ;
+    height: 0;
+    margin-right: 1rem;
 }
-.show-links {
-    height: 10rem;
+li {
+    padding: 0.25rem;
+    margin-left: 0.5rem;
+    place-content: center;
+    margin-left: 1rem;
 }
-a {
+.links a {
     text-decoration: none;
     font-family: var(--ff-secondary);
     text-transform: capitalize;
     color: var(--clr-grey-1);
     letter-spacing: 2px;
     display: block;
-}
-li {
-    padding-bottom: 0.5rem;
-    padding: 0.25rem;
-    margin-left: 0.5rem;
-}
-/* .links a {
     color: var(--clr-grey-3);
     font-size: 1rem;
-    text-transform: capitalize;
-    letter-spacing: var(--spacing);
-    display: block;
-    padding: 0.5rem 1rem;
-    transition: var(--transition);
-  } */
-.links a:hover {
-    background: var(--clr-primary-9);
+}
+.links a:hover{
     color: var(--clr-primary-5);
-    padding-left: 1rem;
+}
+@media screen and (max-width:877px) {
+    .links {
+        display: grid;
+        overflow: hidden;
+        height: 0;
+        margin: 0;
+    }
+    .nav-center {
+        display: grid;
+    }
+    .nav-toggle{
+        height: 50px;
+    }
+    .links a {
+        display: block;
+        transition: var(--transition);
+      }
+    .links a:hover {
+        background: var(--clr-primary-9);
+        color: var(--clr-primary-5);
+        padding-left: 1rem;
+    }
+    .show-links {
+        height: 210px;
+    }
 }
